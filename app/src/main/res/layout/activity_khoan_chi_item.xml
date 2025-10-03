@@ -1,10 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ActivityKhoanChiItem">
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:layout_gravity="center_vertical">
+        <!-- Hình ảnh khoản chi-->
+        <ImageView
+            android:id="@+id/imgKhoanChi"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src=""
+            android:contentDescription="Hình Khoản Chi"
+            android:layout_marginEnd="12dp" />
+        <!--Thông Tin -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <!-- Tên khoản chi-->
+            <TextView
+                android:id="@+id/txtTenKhoanChi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mua đồ"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/black" />
+            <!-- Thời gian -->
+            <TextView
+                android:id="@+id/txtThoiGian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="02/10/2025"
+                android:textSize="14sp"
+                android:textColor="@android:color/darker_gray" />
+        </LinearLayout>
+        <!-- Số tiền -->
+        <TextView
+            android:id="@+id/txtSoTien"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- 2.400.000 VND"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@android:color/holo_red_dark" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
